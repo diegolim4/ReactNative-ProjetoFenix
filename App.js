@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, SafeAreaView , View, TextInput, StatusBar, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, SafeAreaView , View, Card, StatusBar, TouchableOpacity } from 'react-native';
 
 
 export default function App() {
@@ -13,21 +13,33 @@ export default function App() {
          <Text style={styles.txt}>Hello Fenix</Text>        
       </View>
       <View > 
-        <TouchableOpacity style={styles.btn}>
-          <Text style={styles.btn_txt}>###btn</Text>            
+        
+      </View>  
+      <View style={styles.box}>
+        <TouchableOpacity style={styles.card}>
+          <Text> file #1</Text>          
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.card}>
+          <Text> file #2</Text>          
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.card}>
+          <Text> file #3</Text>          
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.card}>
+          <Text> file #4</Text>          
         </TouchableOpacity>
       </View>         
-    </SafeAreaView>
+    </SafeAreaView>      
   );    
     
-}  
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#8B0000',
-    flexDirection: 'row',
-    alignItems: 'center',
+    //flexDirection: 'row',
+    //alignItems:'flex-start',
     //justifyContent: 'center',
               
   },
@@ -35,24 +47,26 @@ const styles = StyleSheet.create({
   txt:{
     fontSize: 25,
     color: '#E8E8E8',
-    marginBottom: 550,
-    margin: 5,           
+    //marginBottom: 550,
+    margin: 10,           
+  },
+
+  box:{
+    flex:1,   
+    margin: 5,            
   },
   
-  btn:{  
-    alignItems:'center',
-    justifyContent:'center',
-    backgroundColor:'#35AAFF',
-    padding:15,
-    borderRadius:7,
-    width:'100%',
-    padding:10,
-    height: 35,
-    marginBottom: 550,
-  }, 
-  
-  btn_txt:{
-    color: '#F5F5DC',
-    fontSize: 20 ,
-  }
+  card:{
+    backgroundColor:'#fff',
+    marginBottom: 5,
+    marginLeft:'1%',
+    width:'50%',
+    shadowColor:'#000',
+    shadowOpacity:1,
+    shadowOffset:{
+      width:3,
+      height:3
+    }
+  },
+
 });
